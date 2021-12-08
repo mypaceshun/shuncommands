@@ -50,9 +50,11 @@ def get_files(target):
 
 def filter_files(target_files, day, rmtmpignore):
     files = []
-    matches = parse_gitignore(rmtmpignore)
+    matches = None
+    if rmtmpignore.exists():
+        matches = parse_gitignore(rmtmpignore)
     for file in target_files:
-        if matches(file):
+        if matches is not None and matches(file):
             continue
         mtime = datetime.fromtimestamp(file.stat().st_mtime)
         today = datetime.now()
