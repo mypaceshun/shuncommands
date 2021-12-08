@@ -36,31 +36,29 @@ def ctx(targetdir, day, dry_run, quiet):
     if not quiet:
         click.echo(f'target is [{target}]')
     rmtmpignore = Path(target, '.rmtmpignore')
-    target_files = get_files(target, day)
-    if rmtmpignore.exists():
-        if not quiet:
-            click.echo(f'find [{rmtmpignore}]')
-        target_files.pop(target_files.index(rmtmpignore))
-        target_files = filter_files(target_files, rmtmpignore)
+    target_files = get_files(target)
+    if rmtmpignore.exists() and not quiet:
+        click.echo(f'find [{rmtmpignore}]')
+    target_files = filter_files(target_files, day, rmtmpignore)
     rm_files(target_files, dry_run, quiet)
 
 
-def get_files(target, day):
-    files = []
-    for file in target.iterdir():
-        mtime = datetime.fromtimestamp(file.stat().st_mtime)
-        today = datetime.now()
-        if mtime + timedelta(days=day) < today:
-            files.append(file)
+def get_files(target):
+    files = [f for f in target.iterdir()]
     return files
 
 
-def filter_files(target_files, rmtmpignore):
+def filter_files(target_files, day, rmtmpignore):
     files = []
     matches = parse_gitignore(rmtmpignore)
     for file in target_files:
-        if not matches(file):
-            files.append(file)
+        if matches(file):
+            continue
+        mtime = datetime.fromtimestamp(file.stat().st_mtime)
+        today = datetime.now()
+        if today - mtime < timedelta(days=day):
+            continue
+        files.append(file)
     return files
 
 
