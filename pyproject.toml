@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "shuncommands"
-version = "0.9.2"
+version = "1.0.0"
 description = "my usefull commands"
 authors = ["KAWAI Shun <shun@osstech.co.jp>"]
 license = "MIT"
