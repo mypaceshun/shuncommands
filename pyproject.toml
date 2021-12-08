@@ -12,6 +12,7 @@ packages = [
 python = "^3.8"
 click = "^8.0.3"
 gitignore-parser = "^0.0.8"
+pikepdf = "^4.1.0"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.16.0"
@@ -23,6 +24,7 @@ isort = "^5.10.1"
 
 [tool.poetry.scripts]
 rmtmp = "src.rmtmp:ctx"
+pdftool = "src.pdftool:ctx"
 
 [tool.poe.tasks.lint]
 cmd = "flake8 src/"
