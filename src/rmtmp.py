@@ -9,6 +9,9 @@ from gitignore_parser import parse_gitignore
 
 
 @click.command(no_args_is_help=True)
+@click.option('-q', '--quiet',
+              is_flag=True,
+              help='quiet output')
 @click.option('--dry-run',
               is_flag=True)
 @click.option('-d', '--day',
@@ -18,7 +21,7 @@ from gitignore_parser import parse_gitignore
               show_default=True)
 @click.argument('targetdir',
                 type=click.Path(exists=True))
-def ctx(targetdir, day, dry_run):
+def ctx(targetdir, day, dry_run, quiet):
     '''
     tmpディレクトリの中身お掃除君
 
@@ -29,13 +32,17 @@ def ctx(targetdir, day, dry_run):
     <TARGETDIR>/.rmtmpignore のファイルに gitignore と同様の書式でファイルを指定することで、
     削除対象から明示的に外すことができる。
     '''
-    target = Path(targetdir)
+    target = Path(targetdir).expanduser()
+    if not quiet:
+        click.echo(f'target is [{target}]')
     rmtmpignore = Path(target, '.rmtmpignore')
     target_files = get_files(target, day)
     if rmtmpignore.exists():
+        if not quiet:
+            click.echo(f'find [{rmtmpignore}]')
         target_files.pop(target_files.index(rmtmpignore))
         target_files = filter_files(target_files, rmtmpignore)
-    rm_files(target_files, dry_run)
+    rm_files(target_files, dry_run, quiet)
 
 
 def get_files(target, day):
@@ -57,12 +64,14 @@ def filter_files(target_files, rmtmpignore):
     return files
 
 
-def rm_files(target_files, dry_run):
+def rm_files(target_files, dry_run, quiet):
     for file in target_files:
         if dry_run is True:
             click.echo(file)
         else:
             try:
+                if not quiet:
+                    click.echo(f'rm [{file}]')
                 if file.is_dir():
                     rmtree(file)
                 else:
