@@ -21,10 +21,14 @@ flake8 = "^4.0.1"
 autoflake = "^1.4"
 autopep8 = "^1.6.0"
 isort = "^5.10.1"
+git-changelog = "^0.5.0"
 
 [tool.poetry.scripts]
 rmtmp = "src.rmtmp:ctx"
 pdftool = "src.pdftool:ctx"
+
+[tool.poe.tasks.changelog]
+cmd = "git-changelog -o CHANGELOG.md .git"
 
 [tool.poe.tasks.lint]
 cmd = "flake8 src/"
