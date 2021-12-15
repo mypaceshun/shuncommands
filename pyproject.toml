@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "shuncommands"
-version = "1.0.1"
+version = "1.0.2"
 description = "mypaceshun usefull commands"
 authors = ["KAWAI Shun <mypaceshun@gmail.com>"]
 maintainers = ["KAWAI Shun <mypaceshun@gmail.com>"]
