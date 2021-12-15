@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [1.0.1](https://github.com/mypaceshun/shuncommands/releases/tag/1.0.1) - 2021-12-15
+
+<small>[Compare with 1.0.0](https://github.com/mypaceshun/shuncommands/compare/1.0.0...1.0.1)</small>
+
+### Changed
+- Changed: [rmtmp] day option is reuiqred set over 0 ([f24a601](https://github.com/mypaceshun/shuncommands/commit/f24a60135279a3f29c7ba62a35844bfd55e37c29) by KAWAI Shun).
+- Changed: [rmtmp] not remove .rmtmpignore ([4099e30](https://github.com/mypaceshun/shuncommands/commit/4099e303bdbdf21c98c466b186e4fddf9e70c815) by KAWAI Shun).
+
+
 ## [1.0.0](https://github.com/mypaceshun/shuncommands/releases/tag/1.0.0) - 2021-12-08
 
 <small>[Compare with 0.9.2](https://github.com/mypaceshun/shuncommands/compare/0.9.2...1.0.0)</small>
