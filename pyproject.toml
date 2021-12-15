@@ -10,7 +10,7 @@ homepage = "https://github.com/mypaceshun/shuncommands"
 repository = "https://github.com/mypaceshun/shuncommands"
 keywords = ["python", "click"]
 packages = [
-  {include = 'src/'}
+  {include = 'shuncommands/'}
 ]
 include = ["CHANGELOG.md"]
 
@@ -28,23 +28,26 @@ autoflake = "^1.4"
 autopep8 = "^1.6.0"
 isort = "^5.10.1"
 git-changelog = "^0.5.0"
+pytest = "^6.2.5"
 
 [tool.poetry.scripts]
-rmtmp = "src.rmtmp:ctx"
-pdftool = "src.pdftool:ctx"
+rmtmp = "shuncommands.rmtmp:ctx"
+pdftool = "shuncommands.pdftool:ctx"
 
 [tool.poe.tasks.changelog]
 cmd = "git-changelog -o CHANGELOG.md .git"
 
 [tool.poe.tasks.lint]
-cmd = "flake8 src/"
+cmd = "flake8 shuncommands/"
 
 [tool.poe.tasks.format]
 sequence = [
-  { cmd = "autopep8 -ir src/" },
-  { cmd = "autoflake -ir --remove-all-unused-imports --remove-unused-variables --ignore-init-module-imports src/" },
-  { cmd = "isort src/" }
+  { cmd = "autopep8 -ir shuncommands/" },
+  { cmd = "autoflake -ir --remove-all-unused-imports --remove-unused-variables --ignore-init-module-imports shuncommands/" },
+  { cmd = "isort shuncommands/" }
 ]
+[tool.poe.tasks.test]
+cmd = "pytest tests/"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
