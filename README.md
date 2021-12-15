@@ -1,5 +1,8 @@
+[![Tests](https://github.com/mypaceshun/shuncommands/actions/workflows/test.yml/badge.svg)](https://github.com/mypaceshun/shuncommands/actions/workflows/test.yml)
 # shuncommands
+
 my usefull commands
+
 
 # install
 
