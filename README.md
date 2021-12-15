@@ -1,6 +1,5 @@
+[![Tests](https://github.com/mypaceshun/shuncommands/actions/workflows/test.yml/badge.svg)](https://github.com/mypaceshun/shuncommands/actions/workflows/test.yml)
 # shuncommands
-
-[![GitHub Actions Demo](https://github.com/mypaceshun/shuncommands/actions/workflows/github-actions-demo.yml/badge.svg)](https://github.com/mypaceshun/shuncommands/actions/workflows/github-actions-demo.yml)
 
 my usefull commands
 
