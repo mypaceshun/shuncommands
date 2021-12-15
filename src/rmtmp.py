@@ -53,6 +53,10 @@ def filter_files(target_files, day, rmtmpignore):
     matches = None
     if rmtmpignore.exists():
         matches = parse_gitignore(rmtmpignore)
+        try:
+            target_files.pop(target_files.index(rmtmpignore))
+        except Exception as error:
+            click.echo(f'WARN: {error}', err=True)
     for file in target_files:
         if matches is not None and matches(file):
             continue
