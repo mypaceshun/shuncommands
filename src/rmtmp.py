@@ -15,7 +15,7 @@ from gitignore_parser import parse_gitignore
 @click.option('--dry-run',
               is_flag=True)
 @click.option('-d', '--day',
-              type=int,
+              type=click.IntRange(0),
               default=3,
               help='削除対象となる期日',
               show_default=True)
