@@ -7,6 +7,8 @@ from pikepdf import Pdf
 
 
 @click.group()
+@click.version_option(None, '-v', '--version')
+@click.help_option('-h', '--help')
 def ctx():
     '''
     \b
@@ -15,6 +17,8 @@ def ctx():
 
 
 @ctx.command()
+@click.version_option(None, '-v', '--version')
+@click.help_option('-h', '--help')
 @click.option('password', '-p',
               help='decrypt password',
               prompt=True,
