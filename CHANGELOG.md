@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v1.0.5](https://github.com/mypaceshun/shuncommands/releases/tag/v1.0.5) - 2021-12-16
+
+<small>[Compare with v1.0.4](https://github.com/mypaceshun/shuncommands/compare/v1.0.4...v1.0.5)</small>
+
+
 ## [v1.0.4](https://github.com/mypaceshun/shuncommands/releases/tag/v1.0.4) - 2021-12-16
 
 <small>[Compare with v1.0.4-a0](https://github.com/mypaceshun/shuncommands/compare/v1.0.4-a0...v1.0.4)</small>
