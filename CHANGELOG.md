@@ -6,17 +6,29 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [v1.0.5](https://github.com/mypaceshun/shuncommands/releases/tag/v1.0.5) - 2021-12-16
 
-<small>[Compare with v1.0.4](https://github.com/mypaceshun/shuncommands/compare/v1.0.4...v1.0.5)</small>
+<small>[Compare with v1.0.4-a2](https://github.com/mypaceshun/shuncommands/compare/v1.0.4-a2...v1.0.5)</small>
+
+### Added
+- Added: [pdftool] --version option ([35f78d9](https://github.com/mypaceshun/shuncommands/commit/35f78d92339331d22ae0a0ca3a294ece55290267) by KAWAI Shun).
+- Added: [rmtmp] --version option ([3e24ca1](https://github.com/mypaceshun/shuncommands/commit/3e24ca141c94c232503299658f299f13e00b8c5e) by KAWAI Shun).
 
 
-## [v1.0.4](https://github.com/mypaceshun/shuncommands/releases/tag/v1.0.4) - 2021-12-16
+## [v1.0.4-a2](https://github.com/mypaceshun/shuncommands/releases/tag/v1.0.4-a2) - 2021-12-16
 
-<small>[Compare with v1.0.4-a0](https://github.com/mypaceshun/shuncommands/compare/v1.0.4-a0...v1.0.4)</small>
+<small>[Compare with v1.0.4-a0](https://github.com/mypaceshun/shuncommands/compare/v1.0.4-a0...v1.0.4-a2)</small>
+
+### Removed
+- Remove windows and macos ([1a19072](https://github.com/mypaceshun/shuncommands/commit/1a19072396f7c36ea55b77d18c3c68bad926fea3) by KAWAI Shun).
 
 
 ## [v1.0.4-a0](https://github.com/mypaceshun/shuncommands/releases/tag/v1.0.4-a0) - 2021-12-16
 
-<small>[Compare with 1.0.3](https://github.com/mypaceshun/shuncommands/compare/1.0.3...v1.0.4-a0)</small>
+<small>[Compare with v1.0.4](https://github.com/mypaceshun/shuncommands/compare/v1.0.4...v1.0.4-a0)</small>
+
+
+## [v1.0.4](https://github.com/mypaceshun/shuncommands/releases/tag/v1.0.4) - 2021-12-16
+
+<small>[Compare with 1.0.3](https://github.com/mypaceshun/shuncommands/compare/1.0.3...v1.0.4)</small>
 
 ### Changed
 - Changed: mv directory src/ -> shuncommands/ ([f567ecd](https://github.com/mypaceshun/shuncommands/commit/f567ecdfc9a3dc2e8869c40b2e069d99b2a24d3d) by KAWAI Shun).
