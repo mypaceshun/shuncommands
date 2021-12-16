@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 from datetime import datetime, timedelta
 from pathlib import Path
 from shutil import rmtree
@@ -9,6 +8,8 @@ from gitignore_parser import parse_gitignore
 
 
 @click.command(no_args_is_help=True)
+@click.version_option(None, '-v', '--version')
+@click.help_option('-h', '--help')
 @click.option('-q', '--quiet',
               is_flag=True,
               help='quiet output')
@@ -48,10 +49,10 @@ def get_files(target):
     return files
 
 
-def filter_files(target_files, day, rmtmpignore):
+def filter_files(target_files, day=3, rmtmpignore=None):
     files = []
     matches = None
-    if rmtmpignore.exists():
+    if rmtmpignore is not None and rmtmpignore.exists():
         matches = parse_gitignore(rmtmpignore)
         try:
             target_files.pop(target_files.index(rmtmpignore))
@@ -68,7 +69,7 @@ def filter_files(target_files, day, rmtmpignore):
     return files
 
 
-def rm_files(target_files, dry_run, quiet):
+def rm_files(target_files, dry_run=False, quiet=False):
     for file in target_files:
         if dry_run is True:
             click.echo(file)

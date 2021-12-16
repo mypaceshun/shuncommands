@@ -43,13 +43,13 @@ pdftool = "shuncommands.pdftool:ctx"
 cmd = "git-changelog -o CHANGELOG.md .git"
 
 [tool.poe.tasks.lint]
-cmd = "flake8 shuncommands/"
+cmd = "flake8 shuncommands/ tests/"
 
 [tool.poe.tasks.format]
 sequence = [
-  { cmd = "autopep8 -ir shuncommands/" },
-  { cmd = "autoflake -ir --remove-all-unused-imports --remove-unused-variables --ignore-init-module-imports shuncommands/" },
-  { cmd = "isort shuncommands/" }
+  { cmd = "autopep8 -ir shuncommands/ tests/" },
+  { cmd = "autoflake -ir --remove-all-unused-imports --remove-unused-variables --ignore-init-module-imports shuncommands/ tests/" },
+  { cmd = "isort shuncommands/ tests/" }
 ]
 [tool.poe.tasks.test]
 cmd = "pytest tests/"
