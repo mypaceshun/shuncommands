@@ -1,0 +1,33 @@
+name: Release
+on:
+  push:
+    tags:
+      - '*.*.*'
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Update pip
+        run: pip install -U pip setuptools wheel
+      - name: Install poetry
+        run: pip install poetry poetry-dynamic-versioning
+      - name: Install dependent libraries
+        run: poetry install
+      - name: Build package
+        run: poetry build
+      - name: Create Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: 'dist/*'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          draft: false
+      - name: Publish to PyPI
+        env:
+          POETRY_PYPI_TOKEN_PYPI: ${{ secrets.PYPI_TOKEN }}
+        run: poetry publish
