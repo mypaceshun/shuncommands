@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v1.0.4](https://github.com/mypaceshun/shuncommands/releases/tag/v1.0.4) - 2021-12-16
+
+<small>[Compare with v1.0.4-a0](https://github.com/mypaceshun/shuncommands/compare/v1.0.4-a0...v1.0.4)</small>
+
+
+## [v1.0.4-a0](https://github.com/mypaceshun/shuncommands/releases/tag/v1.0.4-a0) - 2021-12-16
+
+<small>[Compare with 1.0.3](https://github.com/mypaceshun/shuncommands/compare/1.0.3...v1.0.4-a0)</small>
+
+### Changed
+- Changed: mv directory src/ -> shuncommands/ ([f567ecd](https://github.com/mypaceshun/shuncommands/commit/f567ecdfc9a3dc2e8869c40b2e069d99b2a24d3d) by KAWAI Shun).
+
+
 ## [1.0.3](https://github.com/mypaceshun/shuncommands/releases/tag/1.0.3) - 2021-12-15
 
 <small>[Compare with 1.0.2](https://github.com/mypaceshun/shuncommands/compare/1.0.2...1.0.3)</small>
