@@ -1,4 +1,5 @@
 [![shuncommand Actions](https://github.com/mypaceshun/shuncommands/actions/workflows/main.yml/badge.svg)](https://github.com/mypaceshun/shuncommands/actions/workflows/main.yml)
+![PyPI](https://img.shields.io/pypi/v/shuncommands?style=plastic)
 # shuncommands
 
 my usefull commands
@@ -43,8 +44,10 @@ Usage: pdftool [OPTIONS] COMMAND [ARGS]...
   PDF file をあれやこれやしたいがためのコマンド
 
 Options:
-  --help  Show this message and exit.
+  -v, --version  Show the version and exit.
+  -h, --help     Show this message and exit.
 
 Commands:
+  text    PDFファイルを、テキストファイルに変換する
   unlock  パスワード付きPDFファイルを、パスワードなしPDFファイルにコピーする
 ```
