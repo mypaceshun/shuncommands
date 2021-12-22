@@ -27,3 +27,11 @@ class TestPdfTool():
 
         res = runner.invoke(pdftool.ctx, ['unlock', '-h'])
         assert res.exit_code == 0
+
+    def test_run_text(self):
+        runner = CliRunner()
+        res = runner.invoke(pdftool.ctx, ['text', '--help'])
+        assert res.exit_code == 0
+
+        res = runner.invoke(pdftool.ctx, ['text', '-h'])
+        assert res.exit_code == 0
