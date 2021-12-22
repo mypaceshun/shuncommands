@@ -1,5 +1,6 @@
 [![shuncommand Actions](https://github.com/mypaceshun/shuncommands/actions/workflows/main.yml/badge.svg)](https://github.com/mypaceshun/shuncommands/actions/workflows/main.yml)
 [![PyPI](https://img.shields.io/pypi/v/shuncommands?style=plastic)](https://pypi.org/project/shuncommands/)
+[![Downloads](https://pepy.tech/badge/shuncommands)](https://pepy.tech/project/shuncommands)
 # shuncommands
 
 my usefull commands
