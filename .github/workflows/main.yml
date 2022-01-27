@@ -56,7 +56,12 @@ jobs:
       - name: install libraries
         run: poetry install
       - name: run test
-        run: poetry run poe test
+        run: poetry run poe citest
+      - name: upload codecov
+        uses: codecov/codecov-action@v2
+        with:
+          fail_ci_if_error: true
+          token: ${{ secrets.CODECOV_TOKEN }}
   release:
     needs: test
     name: Release

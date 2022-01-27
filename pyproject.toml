@@ -55,7 +55,10 @@ sequence = [
   { cmd = "black shuncommands/ tests/" }
 ]
 [tool.poe.tasks.test]
-cmd = "pytest --cov tests/"
+cmd = "pytest --cov shuncommands/ --cov-report=html tests/"
+
+[tool.poe.tasks.citest]
+cmd = "pytest --cov shuncommands/ --cov-report=xml tests/"
 
 [tool.flake8]
 max-line-length = 88
