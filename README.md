@@ -1,7 +1,7 @@
 [![shuncommand Actions](https://github.com/mypaceshun/shuncommands/actions/workflows/main.yml/badge.svg)](https://github.com/mypaceshun/shuncommands/actions/workflows/main.yml)
 [![codecov](https://codecov.io/gh/mypaceshun/shuncommands/branch/main/graph/badge.svg?token=6Z6O1J3K0E)](https://codecov.io/gh/mypaceshun/shuncommands)
 [![PyPI](https://img.shields.io/pypi/v/shuncommands?style=plastic)](https://pypi.org/project/shuncommands/)
-[![Downloads](https://pepy.tech/badge/shuncommands)](https://pepy.tech/project/shuncommands)
+[![Downloads](https://static.pepy.tech/badge/shuncommands)](https://pepy.tech/project/shuncommands)
 # shuncommands
 
 my usefull commands
