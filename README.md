@@ -13,10 +13,16 @@ my usefull commands
 $ pip install shuncommands
 ```
 
+# install with pdftool
+
+```
+$ pip install shuncommands[pdf]
+```
+
 # install commands
 
   * rmtmp
-  * pdftool
+  * pdftool (Require install with pdf)
 
 # rmtmp Usage
 
