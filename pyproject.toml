@@ -14,11 +14,6 @@ packages = [
 ]
 include = ["CHANGELOG.md"]
 
-[tool.poetry.group.pdf.dependencies]
-pikepdf = "^8.4.0"
-pdfminer-six = "^20221105"
-
-
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.5.1"
 isort = "^5.12.0"
@@ -37,6 +32,8 @@ style = 'pep440'
 python = ">=3.8.1, <4.0"
 click = "^8.1.7"
 gitignore-parser = "^0.1.6"
+pikepdf = {version = "^8.4.0", extras = ["pdf"]}
+pdfminer-six = {version = "^20221105", extras = ["pdf"]}
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.16.0"
